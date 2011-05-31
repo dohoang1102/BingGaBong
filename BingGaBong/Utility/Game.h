@@ -7,21 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GameSettings.h"
+#import "cocos2d.h"
 
-@class MainMenuScene;
-@class Chapter;
+@class GameSettings;
+@class LevelInfo;
 
 @interface Game : NSObject {
     GameSettings        *gameSettings;
-    NSMutableDictionary *chapters;
+    NSMutableDictionary *levels;
 }
 
 @property (readonly,nonatomic)GameSettings *gameSettings;
 
 +(Game*)sharedInstance;
++(int)chapterIndexFromSceneId:(int)sceneId;
++(int)levelIndexFromSceneId:(int)sceneId;
 
--(void)addChapter:(Chapter*)chapter withName:(NSString*)name;
--(Chapter*)chapterWithName:(NSString*)name;
+-(CCScene*)createSceneFromSceneId:(int)sceneId;
 
 @end

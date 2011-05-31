@@ -12,7 +12,7 @@
 
 -(id)init
 {
-    self= [super initWithName:@"C1L1"];
+    self= [super initWithSceneId:101];
     if(!self) return nil;
     
     return self;

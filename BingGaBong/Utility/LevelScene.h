@@ -9,16 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "GameScene.h"
 
-
+/**
+ Base class for level scenes in the game.
+ */
 @interface LevelScene : GameScene {
-    NSString *levelName;
+    NSString    *sceneName;
+    int         sceneId;
 }
 
 
-@property (readonly,nonatomic)NSString *levelName;
+@property (readonly,nonatomic)NSString *sceneName;
+@property (readonly,nonatomic)int       sceneId;
 
-+(LevelScene*)createInstanceWithName:(NSString*)levelName;
++(LevelScene*)createInstanceWithSceneId:(int)sceneId;
++(LevelScene*)createInstanceWithSceneId:(int)sceneId withSceneName:(NSString*)sceneName;
 
--(id)initWithName:(NSString*)levelName;
+-(id)initWithSceneId:(int)sceneId;
+-(id)initWithSceneId:(int)sceneId withSceneName:(NSString*)sceneName;
 
 @end

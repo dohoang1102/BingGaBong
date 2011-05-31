@@ -15,7 +15,7 @@
 @implementation MainMenuScene
 
 +(MainMenuScene*)createInstance {
-    NSDate *elapse= [NSDate dateWithTimeInterval:5 sinceDate:[NSDate date]];
+    NSDate *elapse= [NSDate dateWithTimeInterval:3 sinceDate:[NSDate date]];
     while([elapse compare:[NSDate date]] == NSOrderedDescending);
     return [[[MainMenuScene alloc] init] autorelease];
 }
@@ -29,7 +29,8 @@
     CCMenuItem *settingItem= [CCMenuItemFont itemFromString:@"Options" target:self selector:@selector(onOptions)];
     CCMenuItem *levelItem= [CCMenuItemFont itemFromString:@"Levels" target:self selector:@selector(onLevelSelect)];
     CCMenuItem *aboutItem= [CCMenuItemFont itemFromString:@"About" target:self selector:@selector(onAbout)];
-    CCMenu *menu= [CCMenu menuWithItems:playItem, settingItem, levelItem, aboutItem, nil];
+    CCMenuItem *exitItem= [CCMenuItemFont itemFromString:@"ByeBye" target:self selector:@selector(onExit)];
+    CCMenu *menu= [CCMenu menuWithItems:playItem, settingItem, levelItem, aboutItem, exitItem, nil];
     [menu alignItemsVertically];
     [self addChild:menu];
     
@@ -42,7 +43,6 @@
 -(void)onPlay
 {
     NSLog(@"Play");
-    exit(0);
 }
 -(void)onOptions
 {
@@ -55,6 +55,10 @@
 -(void)onAbout
 {
     [[CCDirector sharedDirector] replaceScene:[AboutScene createInstance]];
+}
+-(void)onExit
+{
+    exit(0);
 }
 
 @end

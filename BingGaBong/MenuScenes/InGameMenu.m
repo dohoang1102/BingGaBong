@@ -11,6 +11,7 @@
 
 @implementation InGameMenu
 
+
 +(InGameMenu*)createInstance
 {
     return [[[InGameMenu alloc] init] autorelease];

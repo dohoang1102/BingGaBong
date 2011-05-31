@@ -9,36 +9,48 @@
 #import "LevelScene.h"
 #import "TileMapLayer.h"
 #import "InGameMenu.h"
+#import "Game.h"
 
 @implementation LevelScene
 
-@synthesize levelName;
+@synthesize sceneName;
+@synthesize sceneId;
 
--(id)initWithName:(NSString*)_levelName
+
+-(id)initWithSceneId:(int)sid withSceneName:(NSString*)name
 {
     self= [super init];
     if(!self) return nil;
     
-    levelName= _levelName;
+    sceneName= name;
+    sceneId= sid;
     
     // Load level
-    NSString *tileMapFileName= [levelName stringByAppendingString:@"TileMap.tmx"];
+    NSString *tileMapFileName= [sceneName stringByAppendingString:@"TileMap.tmx"];
     TileMapLayer *tileMap= [TileMapLayer createInstanceWithTMXFile:tileMapFileName];
     NSAssert(tileMap != nil, @"Unable to find tile map file: %@", tileMapFileName);
-    [self addChild:tileMap];
+    [self addChild:tileMap z:0];
 
     // Load in-game UI
     InGameMenu *inGameMenu= [InGameMenu createInstance];
-    [self addChild:inGameMenu];
+    [self addChild:inGameMenu z:10];
     
     return self;
 }
-
-+(LevelScene*)createInstanceWithName:(NSString*)levelName
+-(id)initWithSceneId:(int)sid
 {
-    return [[[LevelScene alloc] initWithName:levelName] autorelease];
+    NSString *sname= [NSString stringWithFormat:@"C%@L%@", [Game chapterIndexFromSceneId:sceneId], [Game levelIndexFromSceneId:sceneId]];
+    return [self initWithSceneId:sid withSceneName:sname];
 }
 
++(LevelScene*)createInstanceWithSceneId:(int)sid withSceneName:(NSString*)name
+{
+    return [[[LevelScene alloc] initWithSceneId:sid withSceneName:name] autorelease];
+}
++(LevelScene*)createInstanceWithSceneId:(int)sid
+{
+    return [[[LevelScene alloc] initWithSceneId:sid] autorelease];
+}
 
 // ======================================================================================
 -(id) init
