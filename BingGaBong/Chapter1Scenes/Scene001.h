@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LevelScene.h"
+#import "TileMapScene.h"
 
 
-@interface C1L1Scene : LevelScene {
+@interface Scene001 : TileMapScene {
     
 }
 
-+(LevelScene*)createInstance;
++(TileMapScene*)createInstance;
 
 @end

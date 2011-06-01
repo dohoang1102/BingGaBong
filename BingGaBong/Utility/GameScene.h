@@ -12,11 +12,15 @@
 @class GameLoopLayer;
 
 @interface GameScene : CCScene {
-    GameLoopLayer *gameLoopLayer;
+    GameLoopLayer   *gameLoopLayer;
 }
 
 @property (readonly,nonatomic)GameLoopLayer *gameLoopLayer;
 
 +(GameScene*)createInstance;
+
+-(NSString*)sceneName;
+-(void)loadBackDrop;
+-(CCLayer*)getInGameMenu;
 
 @end

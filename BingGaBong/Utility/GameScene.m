@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "GameLoopLayer.h"
+#import "Game.h"
 
 
 @implementation GameScene
@@ -19,8 +20,12 @@
     self= [super init];
     if(self == nil) return nil;
     
+    // Instanciate gameloop
     gameLoopLayer= [GameLoopLayer createInstance];
     [self addChild:gameLoopLayer];
+    
+    // Load the backdrop
+    [self loadBackDrop];
     
     return self;
 }
@@ -30,9 +35,18 @@
     return [[[GameScene alloc] init] autorelease];
 }
 
--(void)dealloc
-{
-    [super dealloc];
-}
 
+-(NSString*)sceneName
+{
+    return NSStringFromClass([self class]);
+}
+-(void)loadBackDrop
+{
+    [[Game sharedInstance] loadBackDropForScene:self];
+}
+-(CCLayer*)getInGameMenu
+{
+    return [[Game sharedInstance] getInGameMenuForScene:self];
+}
+            
 @end

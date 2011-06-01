@@ -11,18 +11,21 @@
 
 @class GameSettings;
 @class LevelInfo;
+@class TileMapLayer;
 
 @interface Game : NSObject {
-    GameSettings        *gameSettings;
-    NSMutableDictionary *levels;
+    GameSettings    *gameSettings;
+    NSArray         *chapters;
 }
 
 @property (readonly,nonatomic)GameSettings *gameSettings;
 
 +(Game*)sharedInstance;
-+(int)chapterIndexFromSceneId:(int)sceneId;
-+(int)levelIndexFromSceneId:(int)sceneId;
 
--(CCScene*)createSceneFromSceneId:(int)sceneId;
+-(CCScene*)createFirstScene;
+-(CCScene*)createNextScene:(CCScene*)currentScene;
+
+-(void)loadBackDropForScene:(CCScene*)scene;
+-(CCLayer*)getInGameMenuForScene:(CCScene*)scene;
 
 @end

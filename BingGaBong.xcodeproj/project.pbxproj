@@ -156,11 +156,16 @@
 		B404FFD2138C248600F2F404 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B404FFD1138C248600F2F404 /* AppDelegate.mm */; };
 		B404FFD5138C248600F2F404 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B404FFD4138C248600F2F404 /* RootViewController.m */; };
 		B404FFDB138C248600F2F404 /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = B404FFDA138C248600F2F404 /* GLES-Render.mm */; };
-		B404FFDE138C248700F2F404 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = B404FFDD138C248700F2F404 /* blocks.png */; };
 		B404FFF0138C25EA00F2F404 /* GameLoopLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B404FFE7138C25EA00F2F404 /* GameLoopLayer.m */; };
 		B404FFF1138C25EA00F2F404 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B404FFE9138C25EA00F2F404 /* GameScene.m */; };
 		B404FFF2138C25EA00F2F404 /* TileMapInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B404FFEC138C25EA00F2F404 /* TileMapInfo.m */; };
 		B404FFF3138C25EA00F2F404 /* TileMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B404FFEE138C25EA00F2F404 /* TileMapLayer.m */; };
+		B4259A8D139696D0004EAB2B /* DefaultBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A8C139696D0004EAB2B /* DefaultBackdrop.png */; };
+		B4259A8F1396BC29004EAB2B /* Chapter1Backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A8E1396BC29004EAB2B /* Chapter1Backdrop.png */; };
+		B4259A911396BC3F004EAB2B /* Scene001Backdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A901396BC3F004EAB2B /* Scene001Backdrop.png */; };
+		B4259A931396BD2F004EAB2B /* AboutSceneBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A921396BD2F004EAB2B /* AboutSceneBackdrop.png */; };
+		B4259A981396C4AD004EAB2B /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B4259A971396C4AD004EAB2B /* SplashScreen.m */; };
+		B4259A9A1396CA4F004EAB2B /* SplashScreenBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */; };
 		B4C081F5138C4D06009B8FF6 /* BackgroundAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F4138C4D06009B8FF6 /* BackgroundAtlas.png */; };
 		B4C081F7138C4D16009B8FF6 /* CharacterAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F6138C4D16009B8FF6 /* CharacterAtlas.png */; };
 		B4C081F9138C4D26009B8FF6 /* GadgetAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F8138C4D26009B8FF6 /* GadgetAtlas.png */; };
@@ -170,12 +175,12 @@
 		B4C08221138EB5BF009B8FF6 /* LevelSelectionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0821B138EB5BF009B8FF6 /* LevelSelectionScene.m */; };
 		B4C08222138EB5BF009B8FF6 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0821D138EB5BF009B8FF6 /* MainMenuScene.m */; };
 		B4C08223138EB5BF009B8FF6 /* OptionsScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C0821F138EB5BF009B8FF6 /* OptionsScene.m */; };
-		B4C2A5561393CCF500142A3A /* C1L1Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A5551393CCF500142A3A /* C1L1Scene.m */; };
-		B4C2A55A1393D2B600142A3A /* LevelScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A5591393D2B600142A3A /* LevelScene.m */; };
+		B4C2A5561393CCF500142A3A /* Scene001.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A5551393CCF500142A3A /* Scene001.m */; };
+		B4C2A55A1393D2B600142A3A /* TileMapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A5591393D2B600142A3A /* TileMapScene.m */; };
 		B4C2A55D1393D93F00142A3A /* InGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A55C1393D93F00142A3A /* InGameMenu.m */; };
 		B4C2A5681393E74C00142A3A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C2A5671393E74C00142A3A /* Default.png */; };
 		B4C2A56A1393E75500142A3A /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C2A5691393E75500142A3A /* Default-Landscape~ipad.png */; };
-		B4C2A56D1394242C00142A3A /* LevelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A56C1394242B00142A3A /* LevelInfo.m */; };
+		B4C2A577139578FC00142A3A /* SceneDef.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C2A576139578FB00142A3A /* SceneDef.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -486,7 +491,6 @@
 		B404FFD9138C248600F2F404 /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		B404FFDA138C248600F2F404 /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		B404FFDC138C248700F2F404 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
-		B404FFDD138C248700F2F404 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		B404FFE5138C25EA00F2F404 /* AccelerometerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerProtocol.h; sourceTree = "<group>"; };
 		B404FFE6138C25EA00F2F404 /* GameLoopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLoopLayer.h; sourceTree = "<group>"; };
 		B404FFE7138C25EA00F2F404 /* GameLoopLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLoopLayer.m; sourceTree = "<group>"; };
@@ -498,6 +502,13 @@
 		B404FFED138C25EA00F2F404 /* TileMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMapLayer.h; sourceTree = "<group>"; };
 		B404FFEE138C25EA00F2F404 /* TileMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMapLayer.m; sourceTree = "<group>"; };
 		B404FFEF138C25EA00F2F404 /* TouchProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchProtocol.h; sourceTree = "<group>"; };
+		B4259A8C139696D0004EAB2B /* DefaultBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DefaultBackdrop.png; path = Resources/DefaultBackdrop.png; sourceTree = "<group>"; };
+		B4259A8E1396BC29004EAB2B /* Chapter1Backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chapter1Backdrop.png; path = Resources/Chapter1Backdrop.png; sourceTree = "<group>"; };
+		B4259A901396BC3F004EAB2B /* Scene001Backdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scene001Backdrop.png; path = Resources/Scene001Backdrop.png; sourceTree = "<group>"; };
+		B4259A921396BD2F004EAB2B /* AboutSceneBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AboutSceneBackdrop.png; path = Resources/AboutSceneBackdrop.png; sourceTree = "<group>"; };
+		B4259A961396C4AD004EAB2B /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
+		B4259A971396C4AD004EAB2B /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
+		B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SplashScreenBackdrop.png; path = Resources/SplashScreenBackdrop.png; sourceTree = "<group>"; };
 		B4C081F4138C4D06009B8FF6 /* BackgroundAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAtlas.png; path = Resources/BackgroundAtlas.png; sourceTree = "<group>"; };
 		B4C081F6138C4D16009B8FF6 /* CharacterAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CharacterAtlas.png; path = Resources/CharacterAtlas.png; sourceTree = "<group>"; };
 		B4C081F8138C4D26009B8FF6 /* GadgetAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GadgetAtlas.png; path = Resources/GadgetAtlas.png; sourceTree = "<group>"; };
@@ -513,16 +524,16 @@
 		B4C0821D138EB5BF009B8FF6 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
 		B4C0821E138EB5BF009B8FF6 /* OptionsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionsScene.h; sourceTree = "<group>"; };
 		B4C0821F138EB5BF009B8FF6 /* OptionsScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionsScene.m; sourceTree = "<group>"; };
-		B4C2A5541393CCF500142A3A /* C1L1Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = C1L1Scene.h; sourceTree = "<group>"; };
-		B4C2A5551393CCF500142A3A /* C1L1Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = C1L1Scene.m; sourceTree = "<group>"; };
-		B4C2A5581393D2B600142A3A /* LevelScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelScene.h; sourceTree = "<group>"; };
-		B4C2A5591393D2B600142A3A /* LevelScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelScene.m; sourceTree = "<group>"; };
+		B4C2A5541393CCF500142A3A /* Scene001.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene001.h; sourceTree = "<group>"; };
+		B4C2A5551393CCF500142A3A /* Scene001.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene001.m; sourceTree = "<group>"; };
+		B4C2A5581393D2B600142A3A /* TileMapScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileMapScene.h; sourceTree = "<group>"; };
+		B4C2A5591393D2B600142A3A /* TileMapScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileMapScene.m; sourceTree = "<group>"; };
 		B4C2A55B1393D93F00142A3A /* InGameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InGameMenu.h; sourceTree = "<group>"; };
 		B4C2A55C1393D93F00142A3A /* InGameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InGameMenu.m; sourceTree = "<group>"; };
 		B4C2A5671393E74C00142A3A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B4C2A5691393E75500142A3A /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		B4C2A56B1394242B00142A3A /* LevelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelInfo.h; sourceTree = "<group>"; };
-		B4C2A56C1394242B00142A3A /* LevelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelInfo.m; sourceTree = "<group>"; };
+		B4C2A575139578FA00142A3A /* SceneDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDef.h; sourceTree = "<group>"; };
+		B4C2A576139578FB00142A3A /* SceneDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDef.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -597,6 +608,8 @@
 				B404FE0C138C248400F2F404 /* Resources */,
 				B404FE20138C248400F2F404 /* libs */,
 				B404FFCC138C248600F2F404 /* Supporting Files */,
+				B4C2A575139578FA00142A3A /* SceneDef.h */,
+				B4C2A576139578FB00142A3A /* SceneDef.m */,
 			);
 			path = BingGaBong;
 			sourceTree = "<group>";
@@ -604,6 +617,11 @@
 		B404FE0C138C248400F2F404 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */,
+				B4259A921396BD2F004EAB2B /* AboutSceneBackdrop.png */,
+				B4259A901396BC3F004EAB2B /* Scene001Backdrop.png */,
+				B4259A8E1396BC29004EAB2B /* Chapter1Backdrop.png */,
+				B4259A8C139696D0004EAB2B /* DefaultBackdrop.png */,
 				B4C081F8138C4D26009B8FF6 /* GadgetAtlas.png */,
 				B4C081F6138C4D16009B8FF6 /* CharacterAtlas.png */,
 				B4C081F4138C4D06009B8FF6 /* BackgroundAtlas.png */,
@@ -616,7 +634,6 @@
 				B404FE1B138C248400F2F404 /* Icon@2x.png */,
 				B404FE1D138C248400F2F404 /* Info.plist */,
 				B404FE1E138C248400F2F404 /* iTunesArtwork */,
-				B404FFDD138C248700F2F404 /* blocks.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1079,10 +1096,8 @@
 				B404FFEF138C25EA00F2F404 /* TouchProtocol.h */,
 				B4C08200138D6E5A009B8FF6 /* Game.h */,
 				B4C08201138D6E5A009B8FF6 /* Game.m */,
-				B4C2A5581393D2B600142A3A /* LevelScene.h */,
-				B4C2A5591393D2B600142A3A /* LevelScene.m */,
-				B4C2A56B1394242B00142A3A /* LevelInfo.h */,
-				B4C2A56C1394242B00142A3A /* LevelInfo.m */,
+				B4C2A5581393D2B600142A3A /* TileMapScene.h */,
+				B4C2A5591393D2B600142A3A /* TileMapScene.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -1100,6 +1115,8 @@
 				B4C0821F138EB5BF009B8FF6 /* OptionsScene.m */,
 				B4C2A55B1393D93F00142A3A /* InGameMenu.h */,
 				B4C2A55C1393D93F00142A3A /* InGameMenu.m */,
+				B4259A961396C4AD004EAB2B /* SplashScreen.h */,
+				B4259A971396C4AD004EAB2B /* SplashScreen.m */,
 			);
 			path = MenuScenes;
 			sourceTree = "<group>";
@@ -1107,8 +1124,8 @@
 		B4C08224138EB5C6009B8FF6 /* Chapter1Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				B4C2A5541393CCF500142A3A /* C1L1Scene.h */,
-				B4C2A5551393CCF500142A3A /* C1L1Scene.m */,
+				B4C2A5541393CCF500142A3A /* Scene001.h */,
+				B4C2A5551393CCF500142A3A /* Scene001.m */,
 			);
 			path = Chapter1Scenes;
 			sourceTree = "<group>";
@@ -1189,12 +1206,16 @@
 				B404FE1A138C248400F2F404 /* Icon.png in Resources */,
 				B404FE1C138C248400F2F404 /* Icon@2x.png in Resources */,
 				B404FE1F138C248400F2F404 /* iTunesArtwork in Resources */,
-				B404FFDE138C248700F2F404 /* blocks.png in Resources */,
 				B4C081F5138C4D06009B8FF6 /* BackgroundAtlas.png in Resources */,
 				B4C081F7138C4D16009B8FF6 /* CharacterAtlas.png in Resources */,
 				B4C081F9138C4D26009B8FF6 /* GadgetAtlas.png in Resources */,
 				B4C2A5681393E74C00142A3A /* Default.png in Resources */,
 				B4C2A56A1393E75500142A3A /* Default-Landscape~ipad.png in Resources */,
+				B4259A8D139696D0004EAB2B /* DefaultBackdrop.png in Resources */,
+				B4259A8F1396BC29004EAB2B /* Chapter1Backdrop.png in Resources */,
+				B4259A911396BC3F004EAB2B /* Scene001Backdrop.png in Resources */,
+				B4259A931396BD2F004EAB2B /* AboutSceneBackdrop.png in Resources */,
+				B4259A9A1396CA4F004EAB2B /* SplashScreenBackdrop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1348,10 +1369,11 @@
 				B4C08221138EB5BF009B8FF6 /* LevelSelectionScene.m in Sources */,
 				B4C08222138EB5BF009B8FF6 /* MainMenuScene.m in Sources */,
 				B4C08223138EB5BF009B8FF6 /* OptionsScene.m in Sources */,
-				B4C2A5561393CCF500142A3A /* C1L1Scene.m in Sources */,
-				B4C2A55A1393D2B600142A3A /* LevelScene.m in Sources */,
+				B4C2A5561393CCF500142A3A /* Scene001.m in Sources */,
+				B4C2A55A1393D2B600142A3A /* TileMapScene.m in Sources */,
 				B4C2A55D1393D93F00142A3A /* InGameMenu.m in Sources */,
-				B4C2A56D1394242C00142A3A /* LevelInfo.m in Sources */,
+				B4C2A577139578FC00142A3A /* SceneDef.m in Sources */,
+				B4259A981396C4AD004EAB2B /* SplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

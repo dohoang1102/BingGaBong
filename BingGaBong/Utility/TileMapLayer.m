@@ -21,7 +21,7 @@
     
     // Load TMX file.
     tileMapInfo= [[TileMapInfo createInstanceWithTMXFile:fileName] retain]; 
-    NSAssert(tileMapInfo != nil, @"Unable to load TMX file: %@", fileName);
+    NSAssert1(tileMapInfo != nil, @"Unable to load TMX file: %@", fileName);
     [self addChild:tileMapInfo.tileMap z:depth];
     
     
