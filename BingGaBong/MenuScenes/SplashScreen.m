@@ -8,6 +8,7 @@
 
 #import "SplashScreen.h"
 #import "Game.h"
+#import "GameLoopLayer.h"
 
 @implementation SplashScreen
 
