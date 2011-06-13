@@ -22,5 +22,6 @@
 -(NSString*)sceneName;
 -(void)loadBackDrop;
 -(CCLayer*)getInGameMenu;
+-(void)playBackgroundMusic;
 
 @end

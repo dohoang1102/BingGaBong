@@ -22,8 +22,14 @@
     // Load TMX file.
     tileMapInfo= [[TileMapInfo createInstanceWithTMXFile:fileName] retain]; 
     NSAssert1(tileMapInfo != nil, @"Unable to load TMX file: %@", fileName);
+
+    // Resize tilemap to fit screen area.
+    CGSize winSize= [[CCDirector sharedDirector] winSize];
+    float tileMapWidth= tileMapInfo.mapSize.width * tileMapInfo.tileSize.width;
+    float tileMapHeight= tileMapInfo.mapSize.height * tileMapInfo.tileSize.height;
+    tileMapInfo.tileMap.scaleX= (winSize.width / tileMapWidth);
+    tileMapInfo.tileMap.scaleY= (winSize.height / tileMapHeight); 
     [self addChild:tileMapInfo.tileMap z:depth];
-    
     
     return self;
 }

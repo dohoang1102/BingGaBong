@@ -26,6 +26,7 @@
     
     // Load the backdrop
     [self loadBackDrop];
+    [self playBackgroundMusic];
     
     return self;
 }
@@ -48,5 +49,9 @@
 {
     return [[Game sharedInstance] getInGameMenuForScene:self];
 }
-            
+-(void)playBackgroundMusic
+{
+    [[Game sharedInstance] playBackgroundMusicForScene:self];
+}
+
 @end

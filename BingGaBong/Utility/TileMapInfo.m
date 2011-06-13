@@ -39,7 +39,10 @@
     
     // Load all map related objects.
     objects= [[tileMap objectGroupNamed:@"Objects"] retain];
-    NSAssert(objects != nil, @"TileMap Objects not found");
+    if(objects == nil) {
+        NSLog(@"TileMap Objects not found");
+    }
+    //    NSAssert(objects != nil, @"TileMap Objects not found");
         
 	return self;
 }

@@ -166,6 +166,8 @@
 		B4259A931396BD2F004EAB2B /* AboutSceneBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A921396BD2F004EAB2B /* AboutSceneBackdrop.png */; };
 		B4259A981396C4AD004EAB2B /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = B4259A971396C4AD004EAB2B /* SplashScreen.m */; };
 		B4259A9A1396CA4F004EAB2B /* SplashScreenBackdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */; };
+		B4259A9E1398046A004EAB2B /* DefaultBackgroundMusic.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B4259A9D1398046A004EAB2B /* DefaultBackgroundMusic.m4a */; };
+		B4259AA4139816CC004EAB2B /* Scene001TileMap.tmx in Resources */ = {isa = PBXBuildFile; fileRef = B4259AA3139816CC004EAB2B /* Scene001TileMap.tmx */; };
 		B4C081F5138C4D06009B8FF6 /* BackgroundAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F4138C4D06009B8FF6 /* BackgroundAtlas.png */; };
 		B4C081F7138C4D16009B8FF6 /* CharacterAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F6138C4D16009B8FF6 /* CharacterAtlas.png */; };
 		B4C081F9138C4D26009B8FF6 /* GadgetAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = B4C081F8138C4D26009B8FF6 /* GadgetAtlas.png */; };
@@ -509,6 +511,8 @@
 		B4259A961396C4AD004EAB2B /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		B4259A971396C4AD004EAB2B /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 		B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SplashScreenBackdrop.png; path = Resources/SplashScreenBackdrop.png; sourceTree = "<group>"; };
+		B4259A9D1398046A004EAB2B /* DefaultBackgroundMusic.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = DefaultBackgroundMusic.m4a; path = Resources/DefaultBackgroundMusic.m4a; sourceTree = "<group>"; };
+		B4259AA3139816CC004EAB2B /* Scene001TileMap.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Scene001TileMap.tmx; path = Resources/Scene001TileMap.tmx; sourceTree = "<group>"; };
 		B4C081F4138C4D06009B8FF6 /* BackgroundAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BackgroundAtlas.png; path = Resources/BackgroundAtlas.png; sourceTree = "<group>"; };
 		B4C081F6138C4D16009B8FF6 /* CharacterAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CharacterAtlas.png; path = Resources/CharacterAtlas.png; sourceTree = "<group>"; };
 		B4C081F8138C4D26009B8FF6 /* GadgetAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GadgetAtlas.png; path = Resources/GadgetAtlas.png; sourceTree = "<group>"; };
@@ -617,6 +621,8 @@
 		B404FE0C138C248400F2F404 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B4259AA3139816CC004EAB2B /* Scene001TileMap.tmx */,
+				B4259A9D1398046A004EAB2B /* DefaultBackgroundMusic.m4a */,
 				B4259A991396CA4F004EAB2B /* SplashScreenBackdrop.png */,
 				B4259A921396BD2F004EAB2B /* AboutSceneBackdrop.png */,
 				B4259A901396BC3F004EAB2B /* Scene001Backdrop.png */,
@@ -1216,6 +1222,8 @@
 				B4259A911396BC3F004EAB2B /* Scene001Backdrop.png in Resources */,
 				B4259A931396BD2F004EAB2B /* AboutSceneBackdrop.png in Resources */,
 				B4259A9A1396CA4F004EAB2B /* SplashScreenBackdrop.png in Resources */,
+				B4259A9E1398046A004EAB2B /* DefaultBackgroundMusic.m4a in Resources */,
+				B4259AA4139816CC004EAB2B /* Scene001TileMap.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

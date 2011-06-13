@@ -8,6 +8,7 @@
 
 #import "Game.h"
 #import "GameSettings.h"
+#import "SimpleAudioEngine.h"
 #import "SplashScreen.h"
 #import "MainMenuScene.h"
 #import "InGameMenu.h"
@@ -16,6 +17,7 @@
 typedef NSMutableArray Chapter;
 
 static Game* ourSharedInstance= nil;
+static CGSize winSize;
 
 @implementation Game
 
@@ -27,6 +29,8 @@ static Game* ourSharedInstance= nil;
     if(!ourSharedInstance) {
         ourSharedInstance= [[Game alloc] init];
     }
+    
+    winSize= [[CCDirector sharedDirector] winSize];
     
     // Create user defaults for game settings.
     NSMutableDictionary *defaultValues= [NSMutableDictionary dictionary];
@@ -47,6 +51,11 @@ static Game* ourSharedInstance= nil;
     self= [super init];
     if(!self) return nil;
     
+    backgroundMusic= nil;
+    audioEngine= [SimpleAudioEngine sharedEngine];
+    audioEngine.backgroundMusicVolume= 0.8f;
+    audioEngine.effectsVolume= 0.8f;
+    
     // Create each chapter
     Chapter *chapter0= [[Chapter alloc] init];
     [chapter0 addObject:[SplashScreen class]];
@@ -64,6 +73,11 @@ static Game* ourSharedInstance= nil;
 
 -(void)dealloc
 {
+    // Stop sound engine
+    [SimpleAudioEngine end];
+    
+    // Release attributes.
+    [backgroundMusic release];
     [chapters release];
     [super dealloc];
 }
@@ -140,7 +154,6 @@ static Game* ourSharedInstance= nil;
     CCSprite *backdrop= [CCSprite spriteWithFile:[fileName stringByAppendingFormat:@".%@", fileExt]];
     
     // Readjust to screen resolution.
-    CGSize winSize= [[CCDirector sharedDirector] winSize];
     CGRect backdropRect= [backdrop textureRect];
     
     if(winSize.width != backdropRect.size.width) {
@@ -150,12 +163,69 @@ static Game* ourSharedInstance= nil;
         backdrop.scaleY= (winSize.height / backdropRect.size.height);
     }
     backdrop.position= ccp(0.5 * winSize.width, 0.5 * winSize.height);
-    [scene addChild:backdrop z:-100];
-    
+    [scene addChild:backdrop z:-100];    
 }
--(CCLayer*)getInGameMenuForScene:(CCScene*)scene
+-(CCLayer*)getInGameMenuForScene:(GameScene*)scene
 {
     return [InGameMenu createInstance];
+}
+
+-(void)playBackgroundMusicForScene:(GameScene*)scene
+{
+    NSBundle *mainBundle= [NSBundle mainBundle];
+    
+    // Try to load the background music specific to the given scene
+    NSString *fileExt= @"m4a";
+    NSString *fileName= [[scene sceneName] stringByAppendingString:@"BackgroundMusic"];
+    if(![mainBundle pathForResource:fileName ofType:fileExt]) {
+        // Try to load backdrop specific for the chapter
+        int i= [self chapterIndexFromScene:scene];
+        fileName= i >=0 ? [NSString stringWithFormat:@"Chapter%dBackgroundMusic",i] : nil;
+        if(!fileName || ![mainBundle pathForResource:fileName ofType:fileExt]) {
+            // Try to load default backdrop
+            fileName= @"DefaultBackgroundMusic";
+            if(![mainBundle pathForResource:fileName ofType:fileExt]) {
+                fileName= nil;            
+            }
+        }
+    }
+    if(!fileName) return;
+    
+    // Don't play our background music if the user is already playing music from a different source.
+    if([[CDAudioManager sharedManager] isOtherAudioPlaying] == YES) return;
+    
+    if([fileName isEqualToString:backgroundMusic] == YES) return;
+    backgroundMusic= [fileName retain];
+    
+    if([audioEngine isBackgroundMusicPlaying] == YES) {
+        [audioEngine stopBackgroundMusic];
+    }
+    [audioEngine playBackgroundMusic:[fileName stringByAppendingFormat:@".%@", fileExt] loop:YES];
+}
+
++(float)xRatioToPixel:(float)xRatio
+{
+    return xRatio * winSize.width;
+}
++(float)yRatioToPixel:(float)yRatio
+{
+    return yRatio * winSize.height;
+}
++(float)xPixelToRatio:(float)xPixel
+{
+    return xPixel / winSize.width;
+}
++(float)yPixelToRatio:(float)yPixel
+{
+    return yPixel / winSize.height;
+}
++(CGPoint)ratioToPixel:(CGPoint)ratio
+{
+    return ccp(ratio.x * winSize.width, ratio.y * winSize.height);
+}
++(CGPoint)pixelToRatio:(CGPoint)pixel
+{
+    return ccp(pixel.x / winSize.width, pixel.y / winSize.height);
 }
 
 @end
